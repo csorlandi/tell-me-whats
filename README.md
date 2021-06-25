@@ -3,6 +3,9 @@
 - [ ] Toggle Theme
 - [ ] Private Routes
 - [ ] Delete Question Modal
+- [ ] Don't allow user join a closed room by url
+- [ ] ESLint + Prettier + Editor Config
+- [ ] React Hook Form
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
