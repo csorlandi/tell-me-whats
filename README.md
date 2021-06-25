@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Challanges
+
+- [ ] Toggle Theme
+- [ ] Private Routes
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
