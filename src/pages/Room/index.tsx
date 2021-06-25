@@ -6,6 +6,7 @@ import { database } from '../../services/firebase';
 
 import { Button } from '../../components/Button';
 import { RoomCode } from '../../components/RoomCode';
+import { Question } from '../../components/Question';
 
 import logoImg from '../../assets/images/logo.svg';
 
@@ -22,7 +23,7 @@ type FirebaseQuestions = Record<string, {
   isHighlighted: boolean;
 }>;
 
-type Question = {
+type QuestionState = {
   id: string;
   author: {
     name: string;
@@ -39,7 +40,7 @@ type RoomParams = {
 
 export function Room() {
   const [newQuestion, setNewQuestion] = useState('');
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const [questions, setQuestions] = useState<QuestionState[]>([]);
   const [title, setTitle] = useState('');
 
   const { user } = useAuth();
@@ -128,7 +129,15 @@ export function Room() {
           </div>
         </form>
 
-        {JSON.stringify(questions)}
+        <div className="question-list">
+          {questions.map(question => (
+            <Question
+              key={question.id}
+              content={question.content}
+              author={question.author}
+            />
+          ))}
+        </div>
       </main>
     </div>
   )
