@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "rooms": {
+      ".read": "get this rules from your firebase project",
+      ".write": "get this rules from your firebase project",
+      "$roomId": {
+        ".read": "get this rules from your firebase project",
+        ".write": "get this rules from your firebase project",
+        "questions": {
+          ".read": "get this rules from your firebase project",
+          ".write": "get this rules from your firebase project",
+            "$questionId":{
+              ".read": "get this rules from your firebase project",
+                  ".write": "get this rules from your firebase project",
+              "likes": {
+                ".read": "get this rules from your firebase project",
+                ".write": "get this rules from your firebase project"
+              }
+            }
+        }
+      }
+    }
+  }
+}
