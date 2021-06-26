@@ -1,53 +1,179 @@
-# Challanges
+<h1 align="center">
+  <a href="https://github.com/csorlandi/tell-me-whats">
+    <img alt="Tellmewhats Logo" src="./readme/logo.png" />
+  </a>
+</h1>
 
-- [ ] Toggle Theme
-- [ ] Private Routes
-- [ ] Delete Question Modal
-- [ ] Don't allow user join a closed room by url
-- [ ] ESLint + Prettier + Editor Config
-- [ ] React Hook Form
+<p align="center">Tell Me Whats is a project initially created to be a platform that allows users who stream to create a room so that other users can send questions to them, and with the platform the questions are organized and ordered so that none of them go unanswered, which often happens when you do a live for a lot of people.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="https://github.com/csorlandi">
+    <img alt="Made by Claudio Orlandi" src="https://img.shields.io/badge/made%20by-Claudio%20Orlandi-4a67ff">
+  </a>
 
-## Available Scripts
+  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/csorlandi/tell-me-whats?color=rgb(74,103,255)">
 
-In the project directory, you can run:
+  <img alt="Contributors" src="https://img.shields.io/github/contributors/csorlandi/tell-me-whats?color=rgb(74,103,255)">
 
-### `yarn start`
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361?color=rgb(74,103,255)">
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <img src="./readme/screenshots/home.png" width="45%" />
+  <img src="./readme/screenshots/empty-room.png" width="45%" />
+  <img src="./readme/screenshots/highlighted-question.png" width="45%" />
+  <img src="./readme/screenshots/user-view.png" width="45%" />
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+## Table of Contents
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<ul>
+  <li><a href="#-features">Features</a></li>
+  <li><a href="#-next-step-challenges">Chalenges</a></li>
+  <li><a href="#-getting-started">Getting Started</a></li>
+  <li><a href="#-contributing">Contributing</a></li>
+  <li><a href="#-support">Support</a></li>
+  <li><a href="#-license">License</a></li>
+</ul>
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📋 Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Documentation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [ ] Work In Progress ...
 
-### `yarn eject`
+### Build with
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces
+  - [Context API](https://reactjs.org/docs/context.html) - Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+  - [Hooks](https://reactjs.org/docs/hooks-faq.html) - Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
+- [Typescript](https://www.typescriptlang.org/) - TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.
+- [Firebase](https://firebase.google.com/) - Firebase provides the tools to build high-quality applications, broaden your user base and profit more. We take care of the basics so you can generate revenue in the business and be dedicated to users.
+  - [Firebase Realtime Database](https://firebase.google.com/docs/database) - The Firebase Realtime Database is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client.
+  - [Firebase Authentication](https://firebase.google.com/docs/auth) - Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## ⚔ Next Step Challenges
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [x] Create an Awesome (😎) Readme (📖)
+- [ ] Install and configure ESLint + Prettier + Editor Config (🛠)
+- [ ] Use Styled Components instead of SCSS (🎛)
+- [ ] Implement Theme Switcher (🌞 Light and Dark 🌚)
+- [ ] Implement Private Routes (🔐) to some routes
+- [ ] Use an Modal instead an alert to confirm question deletion (🗑)
+- [ ] Don't allow (🚫) user join a closed room by url
+- [ ] Try React Hook Form as a form manager (👨‍💼)
+- [ ] Apply Responsivenes (🐱‍👤)
+- [ ] Add PWA support (⬇)
+- [ ] Try Helmet to dynamic headers (🤓)
+- [ ] Implement Questions Tag Heatmap
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
+
+- To run any ReactJS application you need to configure the environment on your machine.
+
+- Setting the environment is a simple process, so it's recommended to follow the Rocketseat guide which is currently the most complete and detailed to make the settings:
+
+  - ### [**Rocketseat Guide**](https://www.notion.so/Configura-es-do-ambiente-React-76f2963a042f45b9b9b567a2795945b8)
+
+### Clone
+
+- Clone this repo to your local machine using:
+
+```
+https://github.com/csorlandi/tell-me-whats
+```
+
+### Setup
+
+- Install project dependencies;
+
+  ```javascript
+    yarn install
+    // or
+    npm install
+    ```
+- Configure Firebase;
+
+  - To configure correctly it's recommendede to follow a step-by-step guide:
+
+    - ### [**Firebase Setup Guide**](./readme/firebase-setup-guide.md)
+
+- Configure local environment variables;
+
+  - Change `.env.example` filename to `.env.local` and fill the variables inside it with Firebase Credentials.
+
+- Run project in development mode;
+
+  ```javascript
+    yarn start
+    // or
+    npm run start
+    ```
+
+  > 💡 If your browser doesn't open the project automatically, open a new tab manually and access `http://localhost:3000`
+
+- Be Happy! 😆
+
+---
+
+## 🤔 Contributing
+
+> To get started...
+
+### Step 1
+
+- 🍴 Fork this repo!
+
+### Step 2
+
+- 👯  Clone this repo to your local machine using `https://github.com/csorlandi/tell-me-whats`
+
+### Step 3
+
+- 🎋  Create your feature branch using `git checkout -b my-feature`
+
+### Step 4
+
+- ✅  Commit your changes using `git commit -m 'feat: My new feature'`;
+
+### Step 5
+
+- 📌  Push to the branch using `git push origin my-feature`;
+
+### Step 6
+
+- 🔃  Create a new pull request
+
+After your Pull Request is merged, can you delete your feature branch.
+
+---
+
+## 📌 Support
+
+Reach out to me at one of the following places!
+
+- Linktree at [@csorlandi](https://linktr.ee/csorlandi)
+- Linkedin at [Claudio Orlandi](https://www.linkedin.com/in/csorlandi/)
+- Youtube at [Claudio Orlandi](https://www.youtube.com/csorlandi)
+
+---
+
+## 📝 License
+
+<img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361?color=rgb(74,103,255)">
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with 💙  Enjoy it!
