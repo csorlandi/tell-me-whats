@@ -1,7 +1,7 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 
-import 'firebase/auth';
-import 'firebase/database';
+import 'firebase/auth'; // eslint-disable-line
+import 'firebase/database'; // eslint-disable-line
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,

@@ -6,11 +6,13 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   isOutlined?: boolean;
 };
 
-export function Button({ isOutlined = false, ...props }: ButtonProps) {
+/* eslint-disable react/button-has-type */
+
+export function Button({
+  isOutlined = false,
+  ...props
+}: ButtonProps): JSX.Element {
   return (
-    <button
-      className={`button ${isOutlined ? 'outlined' : ''}`}
-      {...props}
-    />
-  )
+    <button className={`button ${isOutlined ? 'outlined' : ''}`} {...props} />
+  );
 }

@@ -1,18 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import { useAuth } from "./useAuth";
+import { useAuth } from './useAuth';
 import { database } from '../services/firebase';
 
-type FirebaseQuestions = Record<string, {
-  author: {
-    name: string;
-    avatar: string;
-  };
-  content: string;
-  isAnswered: boolean;
-  isHighlighted: boolean;
-  likes: Record<string, { authorId: string }>;
-}>;
+type FirebaseQuestions = Record<
+  string,
+  {
+    author: {
+      name: string;
+      avatar: string;
+    };
+    content: string;
+    isAnswered: boolean;
+    isHighlighted: boolean;
+    likes: Record<string, { authorId: string }>;
+  }
+>;
 
 type QuestionType = {
   id: string;
@@ -25,9 +28,14 @@ type QuestionType = {
   isHighlighted: boolean;
   likeCount: number;
   likeId: string | undefined;
-}
+};
 
-export function useRoom(roomId: string) {
+type UseRoomReturnType = {
+  title: string;
+  questions: QuestionType[];
+};
+
+export function useRoom(roomId: string): UseRoomReturnType {
   const [questions, setQuestions] = useState<QuestionType[]>([]);
   const [title, setTitle] = useState('');
 
@@ -40,17 +48,21 @@ export function useRoom(roomId: string) {
       const databaseRoom = room.val();
       const firebaseQuestions: FirebaseQuestions = databaseRoom.questions ?? {};
 
-      const parsedQuestions = Object.entries(firebaseQuestions).map(([key, value]) => {
-        return {
-          id: key,
-          content: value.content,
-          author: value.author,
-          isAnswered: value.isAnswered,
-          isHighlighted: value.isHighlighted,
-          likeCount: Object.values(value.likes ?? {}).length,
-          likeId: Object.entries(value.likes ?? {}).find(([,like]) => like.authorId === user?.id)?.[0],
-        };
-      });
+      const parsedQuestions = Object.entries(firebaseQuestions).map(
+        ([key, value]) => {
+          return {
+            id: key,
+            content: value.content,
+            author: value.author,
+            isAnswered: value.isAnswered,
+            isHighlighted: value.isHighlighted,
+            likeCount: Object.values(value.likes ?? {}).length,
+            likeId: Object.entries(value.likes ?? {}).find(
+              ([, like]) => like.authorId === user?.id,
+            )?.[0],
+          };
+        },
+      );
 
       setTitle(databaseRoom.title);
       setQuestions(parsedQuestions);
@@ -58,7 +70,7 @@ export function useRoom(roomId: string) {
 
     return () => {
       roomRef.off('value');
-    }
+    };
   }, [roomId, user?.id]);
 
   return { questions, title };

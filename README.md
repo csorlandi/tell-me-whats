@@ -61,7 +61,7 @@
 ## ⚔ Next Step Challenges
 
 - [x] Create an Awesome (😎) Readme (📖)
-- [ ] Install and configure ESLint + Prettier + Editor Config (🛠)
+- [x] Install and configure ESLint + Prettier + Editor Config (🛠)
 - [ ] Use Styled Components instead of SCSS (🎛)
 - [ ] Implement Theme Switcher (🌞 Light and Dark 🌚)
 - [ ] Implement Private Routes (🔐) to some routes

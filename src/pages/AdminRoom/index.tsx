@@ -18,7 +18,7 @@ type RoomParams = {
   id: string;
 };
 
-export function AdminRoom() {
+export function AdminRoom(): JSX.Element {
   const history = useHistory();
   const params = useParams<RoomParams>();
   const roomId = params.id;
@@ -58,7 +58,9 @@ export function AdminRoom() {
           <img src={logoImg} alt="Tellmewhats" />
           <div>
             <RoomCode code={roomId} />
-            <Button isOutlined onClick={handleEndRoom}>Encerrar Sala</Button>
+            <Button type="button" isOutlined onClick={handleEndRoom}>
+              Encerrar Sala
+            </Button>
           </div>
         </div>
       </header>
@@ -66,8 +68,10 @@ export function AdminRoom() {
       <main>
         <div className="room-title">
           <h1>Sala {title}</h1>
-          { questions.length > 0 && (
-            <span>{questions.length} pergunta{questions.length > 1 && 's'}</span>
+          {questions.length > 0 && (
+            <span>
+              {questions.length} pergunta{questions.length > 1 && 's'}
+            </span>
           )}
         </div>
 
@@ -80,7 +84,7 @@ export function AdminRoom() {
               isAnswered={question.isAnswered}
               isHighlighted={question.isHighlighted}
             >
-              { !question.isAnswered && (
+              {!question.isAnswered && (
                 <>
                   <button
                     type="button"
@@ -96,7 +100,10 @@ export function AdminRoom() {
                   </button>
                 </>
               )}
-              <button type="button" onClick={() => handleDeleteQuestion(question.id)}>
+              <button
+                type="button"
+                onClick={() => handleDeleteQuestion(question.id)}
+              >
                 <img src={deleteImg} alt="Remover Pergunta" />
               </button>
             </Question>
@@ -104,5 +111,5 @@ export function AdminRoom() {
         </div>
       </main>
     </div>
-  )
+  );
 }
