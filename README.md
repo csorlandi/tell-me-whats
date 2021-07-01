@@ -62,7 +62,8 @@
 
 - [x] Create an Awesome (😎) Readme (📖)
 - [x] Install and configure ESLint + Prettier + Editor Config (🛠)
-- [ ] Use Styled Components instead of SCSS (🎛)
+- [x] Use Styled Components instead of SCSS (🎛)
+- [ ] Create isolated file to Application Color Pallete (🎨)
 - [ ] Implement Theme Switcher (🌞 Light and Dark 🌚)
 - [ ] Implement Private Routes (🔐) to some routes
 - [ ] Use an Modal instead an alert to confirm question deletion (🗑)
