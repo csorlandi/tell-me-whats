@@ -12,7 +12,7 @@ import deleteImg from '../../assets/images/delete.svg';
 import checkImg from '../../assets/images/check.svg';
 import answerImg from '../../assets/images/answer.svg';
 
-import './style.scss';
+import * as S from './style';
 
 type RoomParams = {
   id: string;
@@ -52,8 +52,8 @@ export function AdminRoom(): JSX.Element {
   }
 
   return (
-    <div id="page-room">
-      <header>
+    <S.PageRoom>
+      <S.Header>
         <div className="content">
           <img src={logoImg} alt="Tellmewhats" />
           <div>
@@ -63,9 +63,9 @@ export function AdminRoom(): JSX.Element {
             </Button>
           </div>
         </div>
-      </header>
+      </S.Header>
 
-      <main>
+      <S.Main>
         <div className="room-title">
           <h1>Sala {title}</h1>
           {questions.length > 0 && (
@@ -109,7 +109,7 @@ export function AdminRoom(): JSX.Element {
             </Question>
           ))}
         </div>
-      </main>
-    </div>
+      </S.Main>
+    </S.PageRoom>
   );
 }

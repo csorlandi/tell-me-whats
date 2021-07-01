@@ -11,7 +11,7 @@ import illustrationImg from '../../assets/images/illustration.svg';
 import logoImg from '../../assets/images/logo.svg';
 import googleIconImg from '../../assets/images/google-icon.svg';
 
-import './style.scss';
+import * as S from './style';
 
 export function Home(): JSX.Element {
   const [roomCode, setRoomCode] = useState('');
@@ -48,16 +48,16 @@ export function Home(): JSX.Element {
   }
 
   return (
-    <div id="page-auth">
-      <aside>
+    <S.PageAuth>
+      <S.Aside>
         <img
           src={illustrationImg}
           alt="Ilustração simbolizando perguntas e respostas"
         />
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
-      </aside>
-      <main>
+      </S.Aside>
+      <S.Main>
         <div className="main-content">
           <img src={logoImg} alt="Tellmewhats" />
           <button
@@ -79,7 +79,7 @@ export function Home(): JSX.Element {
             <Button type="submit">Entrar na sala</Button>
           </form>
         </div>
-      </main>
-    </div>
+      </S.Main>
+    </S.PageAuth>
   );
 }

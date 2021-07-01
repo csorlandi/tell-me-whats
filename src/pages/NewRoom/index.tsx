@@ -10,7 +10,7 @@ import logoImg from '../../assets/images/logo.svg';
 
 import { Button } from '../../components/Button';
 
-import './style.scss';
+import * as S from './style';
 
 export function NewRoom(): JSX.Element {
   const [newRoom, setNewRoom] = useState('');
@@ -34,16 +34,16 @@ export function NewRoom(): JSX.Element {
   }
 
   return (
-    <div id="page-auth">
-      <aside>
+    <S.PageAuth>
+      <S.Aside>
         <img
           src={illustrationImg}
           alt="Ilustração simbolizando perguntas e respostas"
         />
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
-      </aside>
-      <main>
+      </S.Aside>
+      <S.Main>
         <div className="main-content">
           <img src={logoImg} alt="Tellmewhats" />
           <h2>Criar uma nova sala</h2>
@@ -60,7 +60,7 @@ export function NewRoom(): JSX.Element {
             Quer entrar em uma sala existente? <Link to="/">clique aqui</Link>
           </p>
         </div>
-      </main>
-    </div>
+      </S.Main>
+    </S.PageAuth>
   );
 }

@@ -11,7 +11,7 @@ import { Question } from '../../components/Question';
 
 import logoImg from '../../assets/images/logo.svg';
 
-import './style.scss';
+import * as S from './style';
 
 type RoomParams = {
   id: string;
@@ -65,15 +65,15 @@ export function Room(): JSX.Element {
   }
 
   return (
-    <div id="page-room">
-      <header>
+    <S.PageRoom>
+      <S.Header>
         <div className="content">
           <img src={logoImg} alt="Tellmewhats" />
           <RoomCode code={roomId} />
         </div>
-      </header>
+      </S.Header>
 
-      <main>
+      <S.Main>
         <div className="room-title">
           <h1>Sala {title}</h1>
           {questions.length > 0 && (
@@ -83,7 +83,7 @@ export function Room(): JSX.Element {
           )}
         </div>
 
-        <form onSubmit={handleSendQuestion}>
+        <S.Form onSubmit={handleSendQuestion}>
           <textarea
             placeholder="O que você quer perguntar?"
             value={newQuestion}
@@ -106,7 +106,7 @@ export function Room(): JSX.Element {
               Enviar pergunta
             </Button>
           </div>
-        </form>
+        </S.Form>
 
         <div className="question-list">
           {questions.map(question => (
@@ -147,7 +147,7 @@ export function Room(): JSX.Element {
             </Question>
           ))}
         </div>
-      </main>
-    </div>
+      </S.Main>
+    </S.PageRoom>
   );
 }
