@@ -1,6 +1,6 @@
 import copyImg from '../../assets/images/copy.svg';
 
-import './style.scss';
+import * as S from './style';
 
 type RoomCodeProps = {
   code: string;
@@ -12,7 +12,7 @@ export function RoomCode({ code }: RoomCodeProps): JSX.Element {
   }
 
   return (
-    <button
+    <S.RoomCode
       type="button"
       className="room-code"
       onClick={copyRoomCodeToClipboard}
@@ -21,6 +21,6 @@ export function RoomCode({ code }: RoomCodeProps): JSX.Element {
         <img src={copyImg} alt="Copy room code" />
       </div>
       <span>Sala #{code}</span>
-    </button>
+    </S.RoomCode>
   );
 }
